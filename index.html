@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Completo</title>
+</head>
+<body>
+    <h1>Formulário de Inscrição</h1>
+
+    <form action="/submit_form" method="POST">
+
+       
+        <fieldset>
+            <legend>Dados de Acesso</legend>
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required><br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required><br><br>
+
+            <label for="data-acesso">Data de Acesso:</label>
+            <input type="date" id="data-acesso" name="data-acesso" required><br><br>
+        </fieldset>
+
+        <br>
+
+       
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required><br><br>
+
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" required><br><br>
+
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="complemento" name="complemento"><br><br>
+
+            <label for="cidade">Cidade:</label>
+            <input list="cidades" id="cidade" name="cidade" required>
+            <datalist id="cidades">
+                <option value="São Paulo">
+                <option value="Rio de Janeiro">
+                <option value="Belo Horizonte">
+                <option value="Brasília">
+                <option value="Curitiba">
+            </datalist><br><br>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="PR">Paraná</option>
+
+            </select><br><br>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" required><br><br>
+
+            <label>Gênero:</label><br>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label><br>
+            <input type="radio" id="nao-informar" name="genero" value="nao-informar">
+            <label for="nao-informar">Prefiro não informar</label><br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Preferências de Curso e Modelo</legend>
+
+            <label>Escolha seu curso:</label><br>
+            <input type="checkbox" id="ads" name="curso" value="ads">
+            <label for="ads">Análise e Desenvolvimento de Sistemas</label><br>
+
+            <input type="checkbox" id="jogos" name="curso" value="jogos">
+            <label for="jogos">Jogos Digitais</label><br>
+
+            <input type="checkbox" id="gestao-ti" name="curso" value="gestao-ti">
+            <label for="gestao-ti">Gestão de TI</label><br>
+
+            <input type="checkbox" id="banco-dados" name="curso" value="banco-dados">
+            <label for="banco-dados">Banco de Dados</label><br><br>
+
+            <label>Modelo de Ensino:</label><br>
+            <input type="radio" id="presencial" name="modelo" value="presencial">
+            <label for="presencial">Presencial</label><br>
+
+            <input type="radio" id="ead" name="modelo" value="ead">
+            <label for="ead">EAD</label><br>
+
+            <input type="radio" id="semi-presencial" name="modelo" value="semi-presencial">
+            <label for="semi-presencial">Semi-presencial</label><br><br>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
